@@ -37,7 +37,7 @@ export default function Brands() {
         {/* Top */}
         <div className="container text-center space-y-3 py-10">
           <h1 className="font-bold text-3xl">Our Partner Brands</h1>
-          <p className="text-gray-600 w-2/3 mx-auto">
+          <p className="text-gray-600 w-2/3 mx-auto text-13 md:text-15">
             Discover quality products from our trusted brands partners. We've partnered with leading
             brands to bring you the best selection to fresh and organic products
           </p>
@@ -46,8 +46,8 @@ export default function Brands() {
         <div className="bg-gray-100">
           <div className="container">
             {/* search input */}
-            <div className="py-10 ">
-              <div className="flex justify-between items-center">
+            <div className="pt-10 md:py-10">
+              <div className="flex justify-between items-center flex-col gap-y-2 md:flex-row">
                 <div className="relative w-72">
                   <input
                     className="input w-full ps-10 bg-white"

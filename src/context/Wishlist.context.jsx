@@ -37,7 +37,7 @@ export default function WishlistProvider({ children }) {
       setIsLoading(false);
       setError(error);
       setIsError(true);
-      toast.error("error");
+      toast.error(error.message);
     } finally {
       toast.dismiss(loading);
       setIsLoading(false);

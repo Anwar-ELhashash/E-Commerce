@@ -18,10 +18,10 @@ export default function HomeCategory() {
       <section className="bg-gray-100 py-8">
         <div className="container">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold">Shop by Category:</h2>
+            <h2 className="text-lg md:text-2xl font-bold">Shop by Category:</h2>
             <Link
               to="/allCategories"
-              className="text-primary-500 text-15 flex items-center transition-all duration-200 gap-2 hover:underline"
+              className="text-primary-500 text-14  md:text-15 flex items-center transition-all duration-200 gap-2 hover:underline"
             >
               <span>view all categories</span> <FontAwesomeIcon icon={faArrowRight} />
             </Link>

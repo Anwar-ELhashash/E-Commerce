@@ -22,15 +22,19 @@ export default function OrderCard({ order }) {
           </span>
         </div>
         {/* two */}
-        <div className="py-3 px-4 flex items-center *:flex-1 gap-4">
+        <div className="py-3 px-4 flex items-center *:flex-1 gap-2 md:gap-4">
           {/* images */}
           <div className="flex items-center gap-1">
             {Array.isArray(cartItems) &&
               cartItems.map((item) => {
                 return (
-                  <div key={item._id} className="w-16 relative">
-                    <img src={item.product.imageCover} alt="" className="w-full" />
-                    <span className="absolute bg-primary-600 text-white flex justify-center items-center size-4 rounded-[3px] py-3 top-0 right-0">
+                  <div key={item._id} className="relative">
+                    <img
+                      src={item.product.imageCover}
+                      alt=""
+                      className="w-12 h-12 md:w-16 md:h-16 rounded-full object-contain"
+                    />
+                    <span className="absolute bg-primary-600 text-white flex justify-center items-center size-3 rounded-full p-2 top-0 right-0">
                       {item.count}
                     </span>
                   </div>
@@ -38,21 +42,25 @@ export default function OrderCard({ order }) {
               })}
           </div>
           {/* items */}
-          <div>
-            <h5 className="text-gray-500 text-15 font-semibold">Items</h5>
-            <p className="text-sm font-semibold">{cartItems.length} items</p>
+          <div className="text-center">
+            <h5 className="text-gray-500 text-12 md:text-15 text-nowrap font-semibold">Items</h5>
+            <p className="text-12 md:text-14 text-nowrap font-semibold">{cartItems.length} items</p>
           </div>
           {/* Total Amount */}
-          <div>
-            <h5 className="text-gray-500 text-15 font-semibold">Total Amount</h5>
-            <p className="text-sm font-semibold">
+          <div className="text-center">
+            <h5 className="text-gray-500 text-12 md:text-15 text-nowrap font-semibold">
+              Total Amount
+            </h5>
+            <p className="text-12 md:text-14 text-nowrap font-semibold">
               {Math.trunc(totalOrderPrice + 70 + totalOrderPrice * 0.14)} EGP
             </p>
           </div>
           {/* address */}
-          <div>
-            <h5 className="text-gray-500 text-15 font-semibold">Delivered To</h5>
-            <p className="text-sm font-semibold">
+          <div className="text-center">
+            <h5 className="text-gray-500 text-12 md:text-15 text-nowrap font-semibold">
+              Delivered To
+            </h5>
+            <p className="text-12 md:text-14 text-nowrap font-semibold">
               {shippingAddress ? shippingAddress.city : "Nothing"}
             </p>
           </div>

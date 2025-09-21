@@ -37,7 +37,6 @@ export function OrderProvider({ children }) {
       const response = await createOnlineOrder({ id, values });
       if (response.success) {
         setIsLoading(false);
-        toast.success("Success Order ✅");
         setTimeout(() => {
           location.replace(response.data.session.url);
         }, 2000);

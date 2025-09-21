@@ -26,11 +26,11 @@ export default function HomeDeals() {
       <section className="py-8">
         <div className="container">
           {/* Counter */}
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-start md:items-center">
             <div>
-              <h3 className="text-xl font-bold mb-2">Deals Of The Day:</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-2 gap-1">Deals Of The Day:</h3>
 
-              <div className="flex gap-3 items-center">
+              <div className="flex flex-col gap-2 md:flex-row md:items-center">
                 <p className="text-gray-700">Offer ends in: </p>
                 <TimeLeft />
               </div>

@@ -28,20 +28,22 @@ export default function Wishlist() {
             <>
               {/* Top */}
               <div className="pb-3 border-b border-b-gray-200">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center gap-y-3 flex-col md:flex-row md:justify-between">
                   <p className="text-gray-600">{count} items in your wishlist</p>
+
                   <div className="space-x-2">
+                    <button className="btn bg-primary-600 hover:bg-primary-700">
+                      <FontAwesomeIcon className="mr-2" icon={faCartShopping} />
+                      Add All to Cart
+                    </button>
+
                     <button
-                      className="btn bg-white duration-400 text-gray-800 hover:bg-red-500 hover:text-white"
+                      className="btn bg-white duration-400 text-red-500 hover:bg-red-500 hover:text-white border border-red-500"
                       onClick={() => {
                         clearWishlist();
                       }}
                     >
                       <FontAwesomeIcon icon={faTrashCan} /> Clear All
-                    </button>
-                    <button className="btn bg-primary-600 hover:bg-primary-700">
-                      <FontAwesomeIcon className="mr-2" icon={faCartShopping} />
-                      Add All to Cart
                     </button>
                   </div>
                 </div>

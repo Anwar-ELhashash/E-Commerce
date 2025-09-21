@@ -12,7 +12,7 @@ export default function WishlistItem({ productInfo }) {
   const { handelRemoveItemFromWishlist } = useContext(WishlistContext);
   return (
     <>
-      <div className="py-3 border-b border-b-gray-200 flex items-center justify-between gap-20">
+      <div className="py-3 border-b border-b-gray-200 flex flex-col md:flex-row gap-y-3 items-start md:items-center justify-between ">
         {/* right */}
         <div className="flex items-center gap-2 flex-1">
           {/* image */}
@@ -35,6 +35,7 @@ export default function WishlistItem({ productInfo }) {
             </span>
           </div>
         </div>
+
         {/* left */}
         <div className="space-x-3">
           <button
@@ -48,6 +49,7 @@ export default function WishlistItem({ productInfo }) {
           >
             Add to Cart
           </button>
+
           <FontAwesomeIcon
             icon={faTrashCan}
             className="text-gray-600 text-xl transition-all duration-200 cursor-pointer hover:text-red-500"
